@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react/';
 import './App.css'
 import {Grid, Row, Col} from 'react-bootstrap/lib';
 import Navigation from './components/Navigation';
-import fetch from "isomorphic-fetch"
+import fetch from "isomorphic-fetch/"
 import Book from './components/Book';
+import Search from './components/Search';
 
 
 class App extends Component {
@@ -33,18 +34,22 @@ class App extends Component {
     });
     return (
       this.state.books.map(function (book, index) {
-        return <Book key={index} title={book.Title} image={book.Image} description={book.Description}/>;
+        return (
+          <div className="" >
+            <Book className=""  key={index} title={book.Title} image={book.Image} description={book.Description}/>
+          </div>
+        );
       })
     )
   }
 
 
   render() {
-
     console.log(this.state.books);
     return (
       <Grid>
-        <Navigation style={{}}/>
+        <Navigation />
+        <Search />
         <Row className="" style={{marginTop: 100}}>
           {this.renderBooks()}
         </Row>

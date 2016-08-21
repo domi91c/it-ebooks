@@ -5,19 +5,12 @@ import {Navbar, Header, Brand, Nav, NavItem, NavDropdown, MenuItem} from 'react-
 class Navigation extends Component {
   render() {
 
-    // const showGrid = {
-    //  backgroundColor: "#DF446D" ,
-    //   border: 1,
-    //   borderStyle: "solid",
-    //   borderColor: "gray"
-    // };
-
     var navbarStyle = {
       marginBottom: 100,
     };
 
     return (
-      <Navbar className="navbar navbar-inverse navbar-fixed-top" fluid={true} style={navbarStyle}>
+      <Navbar className="navbar navbar-inverse navbar-fixed-top" fluid={true}>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="#">React-Bootstrap</a>
